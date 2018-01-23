@@ -1,0 +1,12 @@
+MIN-VT(G)
+{
+  int MIN=0;
+  if G=empty, then return MIN;
+  for any vertex v in G;
+    if degree(v)==0,
+       then G=G-v;
+    else
+        if MIN-VX(G-v)+1<MIN-VX(G-N[v])+|N(v)|,
+           then return MIN-VX(G-v)+1;
+        else return MIN-VX(G-N[v])+|N(v)|
+}
